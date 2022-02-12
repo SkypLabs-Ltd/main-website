@@ -13,6 +13,8 @@ jobs:
     name: Build and Deploy
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/content'
+    permissions:
+      contents: write
 
     steps:
       - name: Check out code
