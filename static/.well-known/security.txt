@@ -1,0 +1,3 @@
+Contact: mailto:security@skyplabs.com
+Expires: 2023-01-10T17:00:00.000Z
+Preferred-Languages: en, fr
