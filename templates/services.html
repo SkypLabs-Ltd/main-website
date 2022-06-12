@@ -1,0 +1,17 @@
+{% macro list_services() %}
+<div class="columns is-multiline is-mobile">
+  {% set services = get_section(path="services/_index.md") %}
+  {% for service in services.pages %}
+  <div class="column is-one-third">
+    <div class="feature-card is-bordered has-text-centered is-feature-reveal">
+      <div class="card-title">
+        <h3>{{ service.title }}</h3>
+      </div>
+      <div class="card-text">
+        <p>{{ service.summary | safe }}</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endmacro list_services %}
