@@ -1,5 +1,5 @@
 {% macro list_services() %}
-<div class="columns is-multiline is-mobile">
+<div class="columns is-multiline">
   {% set services = get_section(path="services/_index.md") %}
   {% for service in services.pages %}
   <div class="column is-one-third">
