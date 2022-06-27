@@ -52,6 +52,17 @@ navbar_items = [
 name = "SkypLabs"
 avatar = "images/logo.png"
 
+[extra.company]
+legal_name = "SkypLabs Limited"
+address = [
+  "71 Lower Baggot Street",
+  "Ground Floor",
+  "D02 P593",
+  "Dublin, Ireland",
+]
+# Used to automatically update the copyright year range.
+incorporation_year = "2021"
+
 [extra.social]
 email = "hello@skyplabs.com"
 github = "SkypLabs-Ltd"
