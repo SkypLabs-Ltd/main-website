@@ -13,7 +13,6 @@
         <img class="is-rounded" src="{{ config.extra.author.avatar }}" style="max-width: 192px" />
       </figure>
       {% endif %}
-      {{ macros::social_links( social_config=config.extra.social) }}
     </div>
   </div>
 </section>
@@ -23,8 +22,33 @@
 <section class="section">
   <div class="container">
     <div class="content">
-      {{ services::list_services() }}
+    {{ services::list_services() }}
     </div>
   </div>
 </section>
 {% endblock %}
+
+{% block footer %}
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-one-third">
+        <div class="has-text-centered">
+        {% for line in config.extra.company.address %}
+          {{ line }}
+          <br>
+        {% endfor %}
+        </div>
+      </div>
+      <div class="column is-one-third">
+        <div class="has-text-centered">
+        {{ macros::social_links( social_config=config.extra.social) }}
+        </div>
+      </div>
+    </div>
+    <div class="copyright has-text-centered">
+      <p>&copy; {{ config.extra.company.incorporation_year }}-{{ now() | date(format="%Y") }} {{ config.extra.company.legal_name }}</p>
+    </div>
+  </div>
+</footer>
+{% endblock footer %}
