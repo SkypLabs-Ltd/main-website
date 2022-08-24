@@ -1,0 +1,30 @@
+@charset "utf-8"
+
+// Update Bulma's global variables
+$family-sans-serif: "Jost", sans-serif;
+$footer-padding: 1.0rem 2.5rem;
+
+html
+    scroll-behavior: smooth;
+
+body
+    font-family: $family-sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+
+body[theme="dark"]
+    filter: invert(1) hue-rotate(180deg);
+
+
+section
+    flex: 1;
+
+
+img[theme="dark"],
+picture[theme="dark"],
+video[theme="dark"],
+pre[theme="dark"]
+    filter: invert(1) hue-rotate(180deg);
+
