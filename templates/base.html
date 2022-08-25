@@ -1,7 +1,17 @@
 {% extends "deepthought/templates/base.html" %}
 
+{% import "metatags.html" as metatags %}
+
 {% block user_custom_stylesheet %}
 <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charset="utf-8" />
+
+{# Custom meta tags are placed here as there is no other block for this very
+purpose in the DeepThought theme at the moment. #}
+{% if config.description %}
+<meta name="description" content="{{ config.description }}">
+{% endif %}
+
+{{ metatags::og_tags() }}
 {% endblock %}
 
 {% block analytics %}

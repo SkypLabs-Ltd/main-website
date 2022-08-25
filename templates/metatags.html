@@ -1,0 +1,14 @@
+{% macro og_tags() %}
+<!-- Open Graph Meta Tags -->
+<meta property="og:url" content="{{ config.base_url }}">
+<meta property="og:type" content="website">
+{% if config.title %}
+<meta property="og:title" content="{{ config.title }}">
+{% endif %}
+{% if config.description %}
+<meta property="og:description" content="{{ config.description }}">
+{% endif %}
+{% if config.extra.author.avatar %}
+<meta property="og:image" content="{{ config.base_url }}/{{ config.extra.author.avatar }}">
+{% endif %}
+{% endmacro og_tags %}
