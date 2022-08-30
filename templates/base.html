@@ -1,5 +1,44 @@
 {% extends "deepthought/templates/base.html" %}
 
+{% import "metatags.html" as metatags %}
+
+{% block user_custom_stylesheet %}
+<link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charset="utf-8" />
+
+{# Custom meta tags are placed here as there is no other block for this very
+purpose in the DeepThought theme at the moment. #}
+{% if config.description %}
+<meta name="description" content="{{ config.description }}">
+{% endif %}
+
+{{ metatags::og_tags() }}
+{% endblock %}
+
 {% block analytics %}
 <script defer data-domain="skyplabs.com" src="https://plausible.io/js/plausible.js"></script>
 {% endblock %}
+
+{% block footer %}
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-one-third">
+        <div class="has-text-centered">
+        {% for line in config.extra.company.address %}
+          {{ line }}
+          <br>
+        {% endfor %}
+        </div>
+      </div>
+      <div class="column is-one-third">
+        <div class="has-text-centered">
+        {{ macros::social_links( social_config=config.extra.social) }}
+        </div>
+      </div>
+    </div>
+    <div class="copyright has-text-centered">
+      <p>&copy; {{ config.extra.company.incorporation_year }}-{{ now() | date(format="%Y") }} {{ config.extra.company.legal_name }}</p>
+    </div>
+  </div>
+</footer>
+{% endblock footer %}
