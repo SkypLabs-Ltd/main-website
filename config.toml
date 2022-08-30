@@ -53,7 +53,7 @@ navbar_items = [
 
 [extra.author]
 name = "SkypLabs"
-avatar = "images/logo.png"
+avatar = "/images/logo.png"
 
 [extra.company]
 legal_name = "SkypLabs Limited"
@@ -65,6 +65,12 @@ address = [
 ]
 # Used to automatically update the copyright year range.
 incorporation_year = "2021"
+
+[extra.favicon]
+webmanifest = "/favicon/site.webmanifest"
+favicon_16x16 = "/favicon/favicon-16x16.png"
+favicon_32x32 = "/favicon/favicon-32x32.png"
+apple_touch_icon = "/favicon/apple-touch-icon.png"
 
 [extra.social]
 email = "hello@skyplabs.com"
