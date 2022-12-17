@@ -18,10 +18,15 @@ compile_sass = true
 minify_html = true
 
 # When set to "true", a feed is automatically generated.
-generate_feed = false
+generate_feed = true
 
 # Whether to build a search index to be used later on by a JavaScript library.
 build_search_index = true
+
+taxonomies = [
+    { name = "categories", feed = true, paginate_by = 10 },
+    { name = "tags", fees = true, paginate_by = 10 },
+]
 
 [markdown]
 # When set to "true", all code blocks are highlighted.
@@ -48,6 +53,8 @@ smart_punctuation = true
 navbar_items = [
   { code = "en", nav_items = [
     { url = "$BASE_URL/", name = "Home" },
+    { url = "$BASE_URL/posts", name = "Posts" },
+    { url = "$BASE_URL/about", name = "About Us" },
   ]},
 ]
 
@@ -75,3 +82,5 @@ apple_touch_icon = "/favicon/apple-touch-icon.png"
 [extra.social]
 email = "hello@skyplabs.com"
 github = "SkypLabs-Ltd"
+mastodon_username = "SkypLabs"
+mastodon_server = "infosec.exchange"
