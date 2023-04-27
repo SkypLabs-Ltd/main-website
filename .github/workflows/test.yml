@@ -1,14 +1,35 @@
 name: Test
 
 on:
-  - push
-  - pull_request
+  push:
+
+  pull_request:
+    branches: [ 'develop' ]
 
 jobs:
+  is-duplicate:
+    name: Is Duplicate
+    runs-on: ubuntu-latest
+    outputs:
+      should_skip: ${{ steps.skip-check.outputs.should_skip }}
+    permissions:
+      actions: write
+      contents: read
+
+    steps:
+      - id: skip-check
+        name: Skip Check
+        uses: fkirc/skip-duplicate-actions@master
+        with:
+          paths_ignore: '["README.md"]'
+
   build-website:
     name: Build Website
     runs-on: ubuntu-latest
-    if: github.ref != 'refs/heads/content'
+    needs: is-duplicate
+    if: |
+      needs.is-duplicate.outputs.should_skip != 'true' &&
+      github.ref != 'refs/heads/content'
 
     steps:
       - name: Check out code
