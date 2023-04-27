@@ -1,6 +1,6 @@
 +++
 title = "Software Engineering"
-date = "2022-06-12"
+
 weight = 0
 +++
 Programming is not only about code but requires good communication and

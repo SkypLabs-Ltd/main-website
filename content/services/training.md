@@ -1,6 +1,6 @@
 +++
 title = "Training"
-date = "2022-06-12"
+
 weight = 4
 +++
 Engineering goes hand-in-hand with knowledge and experience sharing, which is

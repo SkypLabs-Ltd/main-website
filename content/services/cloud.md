@@ -1,6 +1,6 @@
 +++
 title = "Cloud Infrastructures"
-date = "2022-06-12"
+
 weight = 1
 +++
 We design and build secure cloud infrastructures which are thought to be

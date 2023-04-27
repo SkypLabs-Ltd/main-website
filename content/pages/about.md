@@ -1,6 +1,5 @@
 +++
 title = "About Us"
-date = 2022-08-29
 
 weight = 1
 path = "about/"
