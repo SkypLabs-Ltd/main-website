@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>SkypLabs - Security</title>
+    <subtitle>Security and Software Engineering, IT Consultancy and Content Creation</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://skyplabs.com/tags/security/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://skyplabs.com"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-04-27T00:00:00+00:00</updated>
+    <id>https://skyplabs.com/tags/security/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Google Authenticator is not your friend</title>
+        <published>2023-04-27T00:00:00+00:00</published>
+        <updated>2023-04-27T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://skyplabs.com/posts/google-auth-sync/"/>
+        <id>https://skyplabs.com/posts/google-auth-sync/</id>
+        
+        <summary type="html">&lt;p&gt;The Google Authenticator mobile application has been around for more than a
+decade, allowing to generate &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; title=&quot;TOTP - Wikipedia&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Time-based_One-time_Password&quot;&gt;Time-based One Time Passwords (TOTP)&lt;&#x2F;a&gt;
+locally on platforms such as Android and iOS. A few days ago, an update was
+released adding a couple of new features, including the possibility to
+synchronise your TOTP secrets with Google.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+</feed>
